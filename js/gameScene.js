@@ -9,7 +9,7 @@
 /**
  * This class is the Game Scene.
  */
- class GameScene extends Phaser.Scene {
+class GameScene extends Phaser.Scene {
   /**
    * This method is the construtor.
    */
@@ -62,19 +62,19 @@
   update(time, delta) {
     const keyLeftObj = this.input.keyboard.addKey("LEFT")
     const keyRightObj = this.input.keyboard.addKey("RIGHT")
-    
+
     if (keyLeftObj.isDown === true) {
       this.ship.x -= 15
       if (this.ship.x < 0) {
         this.ship.x = 0
       }
     }
-    
+
     if (keyRightObj.isDown === true) {
       this.ship.x += 15
       if (this.ship.x > 1920) {
         this.ship.x = 1920
-      }      
+      }
     }
   }
 }
